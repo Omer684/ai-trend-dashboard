@@ -19,11 +19,8 @@
 
 ## 📸 Dashboard Preview
 
-> **Add your dashboard screenshot here**
+> (https://i.ibb.co/1GqhmrYW/Screenshot-2026-07-21-203414.png)
 
-```
-images/dashboard.png
-```
 
 ---
 
@@ -269,7 +266,7 @@ This project is licensed under the MIT License.
 **Muhammad Omer**
 
 - GitHub: https://github.com/Omer684
-- LinkedIn: *(Add your LinkedIn profile)*
+- LinkedIn: www.linkedin.com/in/muhammad-omer-b63814317
 - Live Dashboard: https://ai-trend-dashboard.streamlit.app/
 
 ---

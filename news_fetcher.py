@@ -80,11 +80,11 @@ def fetch_ai_news():
 
 def save_news_to_mysql(articles):
     connection = mysql.connector.connect(
-        host="sakura.proxy.rlwy.net",
-        port=47018,
-        user="root",
-        password="YArzqLLbeeBgwndxJHKcHYwaTGDFWmEF",
-        database="railway"
+        host=st.secrets["mysql"]["host"],
+        port=st.secrets["mysql"]["port"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"]
     )
     cursor = connection.cursor()
     

@@ -1,73 +1,92 @@
-# 🤖 AI Intelligence Dashboard
+# 🤖 AI Industry Intelligence Dashboard
 
-> A real-time AI market intelligence platform that tracks AI hiring trends, industry news sentiment, in-demand skills, and search interest in one interactive dashboard.
+<p align="center">
 
-🌐 **Live Demo:** https://ai-trend-dashboard.streamlit.app/
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 
----
+</p>
 
-## 📌 Overview
+> **A production-ready analytics platform that monitors the AI industry by combining live job market data, news sentiment analysis, and AI trend insights into one interactive executive dashboard.**
 
-AI Intelligence Dashboard is an interactive analytics platform built with **Python**, **Streamlit**, **MySQL**, and **Plotly** that aggregates multiple AI industry data sources into a single executive dashboard.
+## 🌐 Live Demo
 
-The project provides insights into:
-
-- 📈 AI hiring trends
-- 📰 AI news sentiment
-- 💼 Most demanded AI skills
-- 🌍 Hiring locations
-- 🔥 Google Trends interest
-- 📊 Executive KPIs
+**https://ai-trend-dashboard.streamlit.app/**
 
 ---
 
-## ✨ Features
+## 📸 Dashboard Preview
 
-### 📊 Executive Dashboard
+> **Add your dashboard screenshot here**
 
-- Modern enterprise dashboard
-- Interactive Plotly visualizations
-- Responsive layout
-- Professional UI
+```
+images/dashboard.png
+```
 
 ---
 
-### 💼 AI Job Analytics
+# 🚀 Project Overview
 
-Tracks:
+The AI industry is evolving rapidly, making it difficult to track hiring demand, emerging skills, and industry sentiment from multiple sources.
 
-- Total AI jobs
-- Hiring locations
-- Companies hiring
+This project solves that problem by building a complete data analytics pipeline that:
+
+- Collects live AI job listings
+- Analyzes AI news using sentiment analysis
+- Tracks AI keyword popularity
+- Stores structured data in MySQL
+- Presents business insights through an interactive dashboard
+
+The result is a centralized AI market intelligence platform that enables users to monitor industry trends in real time.
+
+---
+
+# ✨ Features
+
+### 📊 Executive KPI Dashboard
+
+Monitor key business metrics including:
+
+- Total AI jobs tracked
+- AI news articles analyzed
+- Average sentiment score
+- Positive news coverage
+
+---
+
+### 💼 AI Job Market Analytics
+
+Analyze hiring demand across the AI industry.
+
+Insights include:
+
+- Top hiring locations
+- Companies actively recruiting
 - Most requested AI skills
-
-Job data is collected from:
-
-- RemoteOK API
+- Total job openings
 
 ---
 
 ### 📰 AI News Intelligence
 
-Fetches the latest AI news and performs automatic sentiment analysis.
+Automatically fetches the latest AI news and performs sentiment analysis using Natural Language Processing.
 
-Features include:
+Each article includes:
 
-- Positive / Neutral / Negative sentiment
-- News source
+- Source
 - Publication date
-- Article links
-
-Powered by:
-
-- NewsAPI
-- TextBlob
+- Sentiment label
+- Sentiment score
 
 ---
 
-### 📈 AI Trend Analysis
+### 📈 AI Trend Monitoring
 
-Visualizes interest in AI technologies including:
+Visualizes keyword popularity across multiple weeks.
+
+Tracked technologies include:
 
 - Artificial Intelligence
 - Machine Learning
@@ -77,173 +96,182 @@ Visualizes interest in AI technologies including:
 
 ---
 
-### 📍 Hiring Insights
+### 📉 Interactive Visualizations
 
-Identify:
+Built using Plotly for responsive analytics.
 
-- Top hiring locations
+Includes:
+
+- Bar Charts
+- Donut Charts
+- Trend Lines
+- KPI Cards
+- Interactive Tables
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Language | Python |
+| Dashboard | Streamlit |
+| Database | MySQL |
+| Data Analysis | Pandas |
+| Visualization | Plotly |
+| API Integration | Requests |
+| NLP | TextBlob |
+| Deployment | Streamlit Cloud |
+| Cloud Database | Railway MySQL |
+
+---
+
+# 🏗 Architecture
+
+```
+              RemoteOK API
+                     │
+                     ▼
+          AI Job Data Pipeline
+                     │
+                     ▼
+                MySQL Database
+                     ▲
+                     │
+NewsAPI ───► Sentiment Analysis
+
+                     ▲
+                     │
+      AI Trends Generator
+
+                     │
+                     ▼
+
+      Streamlit Analytics Dashboard
+```
+
+---
+
+# 📂 Project Structure
+
+```
+AI-Industry-Intelligence-Dashboard/
+
+│── dashboard.py
+│── scraper.py
+│── news_fetcher.py
+│── trends_fetcher.py
+│── database.py
+│── requirements.txt
+│── README.md
+```
+
+---
+
+# 📊 Dashboard Insights
+
+The dashboard provides real-time insights such as:
+
+- AI hiring demand by location
 - Most requested AI skills
-- Current hiring activity
+- Industry news sentiment
+- Historical keyword trends
+- Executive KPI summary
+- Latest AI news feed
 
 ---
 
-## 🛠 Tech Stack
+# 🚀 Getting Started
 
-| Technology | Purpose |
-|------------|----------|
-| Python | Backend |
-| Streamlit | Dashboard |
-| MySQL | Database |
-| Plotly | Interactive Charts |
-| Pandas | Data Analysis |
-| Requests | API Integration |
-| TextBlob | Sentiment Analysis |
-
----
-
-## 📂 Project Structure
-
-```
-AI-Intelligence-Dashboard/
-│
-├── app.py
-├── database.py
-├── jobs.py
-├── news.py
-├── trends.py
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 🚀 Installation
-
-### Clone Repository
+Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/AI-Intelligence-Dashboard.git
+git clone https://github.com/Omer684/ai-trend-dashboard.git
 
-cd AI-Intelligence-Dashboard
+cd ai-trend-dashboard
 ```
 
-### Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Windows
-
-```bash
-venv\Scripts\activate
-```
-
-Linux / Mac
-
-```bash
-source venv/bin/activate
-```
-
-### Install Dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Dashboard
+Run the application
 
 ```bash
-streamlit run app.py
+streamlit run dashboard.py
 ```
 
 ---
 
-## 📊 Data Sources
+# 💡 Engineering Challenges
 
-### RemoteOK
+### Live Data Integration
 
-AI job listings
+Integrated multiple external APIs into a unified analytics platform.
 
-### NewsAPI
+### Sentiment Analysis
 
-Latest AI news
+Applied NLP techniques using TextBlob to classify AI news as:
 
-### TextBlob
+- Positive
+- Neutral
+- Negative
 
-News sentiment analysis
+### Data Modeling
 
-### Mock Google Trends
+Designed relational MySQL tables for jobs, news, and trend data while preventing duplicate records.
 
-Realistic AI keyword trend simulation
+### Interactive Analytics
 
----
-
-## 📷 Dashboard Preview
-
-**Live Demo**
-
-https://ai-trend-dashboard.streamlit.app/
-
-*(Add screenshots here)*
+Built responsive Plotly visualizations that allow users to explore hiring patterns and market trends.
 
 ---
 
-## 🎯 Future Improvements
+# 🎯 Skills Demonstrated
 
-- User authentication
+- Data Analytics
+- Data Engineering
+- ETL Pipeline Development
+- API Integration
+- SQL & Database Design
+- Dashboard Development
+- Data Visualization
+- Sentiment Analysis
+- Python Programming
+- Business Intelligence
+- Streamlit Deployment
+- Cloud Database Management
+
+---
+
+# 🔮 Future Enhancements
+
 - Real Google Trends integration
 - Salary analytics
-- Company analytics
-- AI-powered insights
-- Historical trend forecasting
-- Download reports
-- Dark/Light mode
+- Company comparison dashboard
+- AI-powered insight generation
+- Predictive hiring analytics
+- User authentication
+- Export reports (PDF & Excel)
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-
-2. Create a feature branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
-
----
-
-## 📄 License
+# 📄 License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Muhammad Omer**
 
-- LinkedIn: *(Add your LinkedIn)*
-- GitHub: *(Add your GitHub)*
-- Upwork: https://www.upwork.com/freelancers/~01a36e0e6511d133b0
+- GitHub: https://github.com/Omer684
+- LinkedIn: *(Add your LinkedIn profile)*
+- Live Dashboard: https://ai-trend-dashboard.streamlit.app/
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+⭐ **If you found this project useful, consider giving it a star!**

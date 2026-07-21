@@ -259,13 +259,16 @@ a:focus-visible, button:focus-visible{ outline: 2px solid var(--navy); outline-o
 """, unsafe_allow_html=True)
 
 # ── DB CONNECTION ──────────────────────────────────────────
+import streamlit as st
+import mysql.connector
+
 def get_connection():
     return mysql.connector.connect(
-        host="sakura.proxy.rlwy.net",
-        port=47018,
-        user="root",
-        password="YArzqLLbeeBgwndxJHKcHYwaTGDFWmEF",
-        database="railway"
+        host=st.secrets["mysql"]["host"],
+        port=st.secrets["mysql"]["port"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"]
     )
 
 @st.cache_data(ttl=600)

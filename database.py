@@ -1,0 +1,40 @@
+import mysql.connector
+
+def get_connection():
+    return mysql.connector.connect(
+        host="sakura.proxy.rlwy.net",
+        port=47018,
+        user="root",
+        password="YArzqLLbeeBgwndxJHKcHYwaTGDFWmEF",
+        database="railway"
+    )
+    return connection
+
+def setup_database():
+    connection = mysql.connector.connect(
+        host="sakura.proxy.rlwy.net",
+        port=47018,
+        user="root",
+        password="YArzqLLbeeBgwndxJHKcHYwaTGDFWmEF",
+        database="railway"
+    )
+    cursor = connection.cursor()
+    # Remove the CREATE DATABASE and USE lines entirely
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ai_jobs (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255),
+            company VARCHAR(255),
+            location VARCHAR(255),
+            skills TEXT,
+            scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+    connection.commit()
+    connection.commit()
+    cursor.close()
+    connection.close()
+    print("Database setup complete!")
+
+if __name__ == "__main__":
+    setup_database()

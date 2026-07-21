@@ -15,11 +15,11 @@ def get_connection():
 
 def setup_database():
     connection = mysql.connector.connect(
-        host="sakura.proxy.rlwy.net",
-        port=47018,
-        user="root",
-        password="YArzqLLbeeBgwndxJHKcHYwaTGDFWmEF",
-        database="railway"
+        host=st.secrets["mysql"]["host"],
+        port=st.secrets["mysql"]["port"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"]
     )
     cursor = connection.cursor()
     # Remove the CREATE DATABASE and USE lines entirely
